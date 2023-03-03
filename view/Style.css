@@ -1,0 +1,171 @@
+/* Navbar styling starts below  */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(59, 56, 56);
+    color: white;
+}
+
+/* exercise section styling below  */
+.Shoulder-Head{
+    color: white;
+}
+
+.cards{
+    color: black;
+}
+
+.shoulder-cards{
+    color: black;
+}
+
+/* Bmi calculator styling below  */
+.button {
+    color: #fff;
+    background-color: #003896;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    padding: 3%;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.button:hover {
+    background-color: #3c55c2;
+    color: #fff;
+}
+
+.button:focus {
+    outline: 0;
+    background-color: #0d1728;
+}
+
+.max-550 {
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+#imcContainer {
+  width: 100%;
+  border-radius: 5px;
+  height: 40px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3f51b5+0,009688+11,4caf50+21,8bc34a+29,cddc39+40,ffeb3b+51,ff5722+62,f44336+72,f44336+81,dd2a2a+90,b71c1c+100 */
+  background: #3f51b5;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #3f51b5 0%, #009688 11%, #4caf50 21%, #8bc34a 29%, #cddc39 40%, #ffeb3b 51%, #ff5722 62%, #f44336 72%, #f44336 81%, #dd2a2a 90%, #b71c1c 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #3f51b5 0%,#009688 11%,#4caf50 21%,#8bc34a 29%,#cddc39 40%,#ffeb3b 51%,#ff5722 62%,#f44336 72%,#f44336 81%,#dd2a2a 90%,#b71c1c 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #3f51b5 0%,#009688 11%,#4caf50 21%,#8bc34a 29%,#cddc39 40%,#ffeb3b 51%,#ff5722 62%,#f44336 72%,#f44336 81%,#dd2a2a 90%,#b71c1c 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+#IMCbar {
+  width:0%;
+  height: 40px;
+  margin-top: -5px;
+  border-right: 5px solid #000;
+  transition: all 2s ease;
+}
+
+/* register ans services styling below  */
+.register-section.classes-page {
+	background: #000000;
+	padding-top: 100px;
+	margin-top: 0;
+	padding-bottom: 0;
+}
+.register-section.classes-page .classes-page-text {
+	-webkit-box-shadow: 0px 12px 21px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 12px 21px rgba(0, 0, 0, 0.15);
+}
+.register-section .section-title {
+	margin-bottom: 32px;
+}
+.register-section .section-title h2 {
+	margin-bottom: 12px;
+}
+.register-text {
+	padding: 50px 70px 60px 70px;
+	background: #000000;
+	margin-right: -15px;
+}
+.register-text .register-form label {
+	font-size: 14px;
+	color: #ffaaaa;
+	margin-bottom: 11px;
+}
+.register-text .register-form input {
+	width: 100%;
+	height: 46px;
+	border: 1px solid #eed9d9;
+	padding-left: 20px;
+	font-size: 14px;
+	color: #050505;
+	margin-bottom: 18px;
+}
+.register-text .register-form .register-btn {
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: 600;
+	width: 100%;
+	background: -webkit-gradient(linear, left top, right top, from(#eb3c5a), to(#f67831));
+	background: -o-linear-gradient(left, #eb3c5a, #f67831);
+	background: linear-gradient(to right, #eb3c5a, #f67831);
+	border: none;
+	padding: 12px 0;
+	cursor: pointer;
+	margin-top: 30px;
+}
+.register-pic {
+	margin-left: -15px;
+}
+.register-pic img {
+	height: 490px;
+}
+
+/* register and services styling done  */
+
+/* all hover styling below  */
+.col-sm-3:hover{
+    border: 4px solid rgb(248, 162, 63) !important;
+}
+.col-sm-5:hover{
+    border: 4px solid rgb(119, 217, 255);
+}
+.col-sm-12:hover{
+    border: 4px solid rgb(238, 101, 215);
+}
+
+nav ul li a:hover{
+    color: red !important;
+}
+.card:hover{
+    border: 2px solid white;
+}
+
+.card{
+    color: white !important;
+    background-color: black;
+}
+.card-title{
+    color: white !important;
+}
+
+.bmiheading:hover{
+    border: 2px solid red !important;
+    background-color: black !important;
+}
+
+/*---------------------
+  Latest BLog Section
+-----------------------*/
+
+  
+
+
+
+
+
