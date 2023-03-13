@@ -35,6 +35,7 @@ app.use('/home',mainroutes)
 app.use('/user',userroutes)
 app.use('/admin',adminroutes)
 
+  
 app.listen(port,()=>{
     console.log(`Server is running at port no ${port}`);
 })

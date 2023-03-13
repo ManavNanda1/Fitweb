@@ -33,7 +33,7 @@ const done=document.querySelectorAll('.done')
 done.forEach((btn)=>{
 
     btn.addEventListener('click',(event)=>{
-    const enames= event.target.getAttribute('data-exercise-name')
+    const eid= event.target.getAttribute('data-exercise-id')
         try {
              fetch("/user/exercise/save", {
               
@@ -45,7 +45,7 @@ done.forEach((btn)=>{
              },
              // Adding body or contents to send
              body:JSON.stringify({
-                d:enames,
+                id:eid,
              })
             }).then(response => response.json())
             .then(data => console.log(data))

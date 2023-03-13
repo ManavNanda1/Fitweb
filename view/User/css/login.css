@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
+}
+
 :root {
 	/* COLORS */
 	--white: #e9e9e9;
@@ -208,3 +216,14 @@ body {
 		z-index: 5;
 	}
 }
+
+@media only screen and (max-width: 600px) {
+	body {
+	  background: rgb(0, 0, 0) !important;
+	}
+	.right-panel-active{
+		display: flex;
+		flex-direction: column;
+		height: 80vh;
+	}
+  }

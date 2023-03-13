@@ -1,0 +1,102 @@
+/* simple css for all  */
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
+}
+
+
+body{
+   background:  #243b55;
+}
+
+::placeholder{
+    text-align: center;
+}
+
+/* header css code below  */
+.heading{
+    border: 2px solid black;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: azure;
+    padding: 2px;
+}
+
+.heading:hover{
+  border: 2px solid white;
+  color: red;
+  background-color: black;
+  font-weight: bolder;
+  transition: 0.5s ease-in;
+}
+
+
+/* remove button styling  */
+.rem {
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.4em;
+    color: #e74c3c;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .first:hover {
+    background-color: red;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s ease-in;
+  }
+
+/* adding of box styling code below  */
+ #Add-Button{
+    background-color: rgb(36, 236, 203);
+    color: black;
+    font-weight: bolder;
+    font-size: 25px;
+    transition: 0.5s ease-in;
+ }
+
+ #Add-Button:hover{
+    color: black;
+    border: 2px solid rgb(5, 1, 1);
+    border-radius: 10px;
+    background-color: rgb(248, 41, 4) !important;
+}
+
+
+  .fail-btn{
+    color: rgb(0, 0, 0);
+    background-color: #f387ab;
+    font-weight: 700;
+  }
+  .fail-btn:hover{
+    background-color: rgba(160, 0, 0, 0.932);
+    color: black;
+    font-weight: bolder;
+  }
+
+
+
+
+
+/* pass fail color styling below  */
+.tab-col{
+  background-color: #e94c3b;
+}
+.pass-col{
+  background-color: rgb(49, 189, 231);
+  color: black;
+}
+
+
+
+
+

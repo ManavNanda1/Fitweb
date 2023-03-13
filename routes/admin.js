@@ -2,10 +2,10 @@ const express = require("express");
 const router = express.Router();
 const Admin = require("../model/Admin");
 const User = require("../model/User");
+const ExercisesOfUser = require("../model/ExercisesOfUser");
 const Exercise = require("../model/Exercises");
 const bcrypt = require("bcrypt");
 const mongoose = require('mongoose');
-const { findByIdAndDelete } = require("../model/Admin");
 const ObjectId = mongoose.Types.ObjectId;
 
 const isAdmin = (req, res, next) => {
@@ -50,14 +50,29 @@ router.get("/home", isAdmin, async(req, res) => {
 });
 
 
+
+// ACtions of admin==============================================================================
+
+
+
 router.get("/action/userinfo/:userid", isAdmin, async(req, res) => {
     try {
         const userid =req.params.userid
-        const data = await Exercise.find({ userid: userid });
+        const data = await ExercisesOfUser.find({ userid: userid });
         const user = await User.findById(userid);
+        let exercisedata = [];
+        for (let i = 0; i < data.length; i++) {
+          const itemdata= await Exercise.findById(data[i].eid)
+          exercisedata.push({
+            ename:itemdata.name,
+            updatedAt:data[i].updatedAt,
+            count:data[i].count,
+            eid:data[i].eid
+          })
+        }
         res.render("Admin/adminuserprofile", {
           user: user,
-          udata: data,
+          udata: exercisedata,
         });
         
     } catch (error) {
@@ -82,5 +97,28 @@ router.post('/action/removeuser',isAdmin,async (req,res)=>{
     }
    
 })
+router.get('/action/addExercises',async (req,res)=>{
+    res.render('Admin/addExercise')
+})
+router.post('/action/addExercises',isAdmin,async (req,res)=>{
+    try {
+            for (let i = 0; i < req.body.length; i++) {
+              const newExercise = new Exercise({
+                 bodyPart : req.body[i].bodyPart,
+                 equipment : req.body[i].equipment,
+                 gifUrl : req.body[i].gifUrl,
+                 id : req.body[i].id,
+                 name : req.body[i].name,
+                 target : req.body[i].target,
+              })
+              await newExercise.save()
+            }
+            res.json({message:"Succesfully Saved"})
+        }
+     catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+})
+
 
 module.exports = router;

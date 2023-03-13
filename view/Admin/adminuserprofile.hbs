@@ -43,14 +43,16 @@
               <th>ID</th>
               <th>Exercise Name</th>
               <th>Time</th>
+              <th>Count</th>
             </tr>
           </thead>
           <tbody id="user-data">
              {{#each udata}}
                  <tr>
                   <td>{{@index}}</td>
-                  <td>{{name}}</td>
+                  <td>{{ename}}</td>
                   <td>{{updatedAt}}</td>
+                  <td>{{count}}</td>
                  </tr>
               {{/each}}
 
