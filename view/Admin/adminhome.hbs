@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <title>ADMIN PANEL</title>
+    <link rel="stylesheet" href="/static/Admin/css/adminstyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <!-- Header section will be there  -->
+    <div class="container-fluid text-center mt-4">
+      <div class="container-fluid">
+        <h1 class="heading">
+          ADMIN PANEL OF FITWEB (MAJOR PROJEC- 2)
+        </h1>
+      </div>
+    </div>
+
+    <!-- table will be there -->
+    <div class="container">
+      <!-- Add button code below -->
+      <div class="add-button text-center">
+        <a href="/logout"
+          class="btn btn-lg btn-danger mb-4 mt-4 text-center"
+          id="Add-Button"
+        >
+          Logout
+        </a>
+       
+      </div>
+
+      <div class="new-tab table-responsive-sm text-center">
+        <table
+          class="table table-dark table-hover table-responsive-sm first-table"
+          id="Table"
+        >
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Delete</th>
+              <th>Info</th>
+            </tr>
+          </thead>
+          <form id="MyForm">
+          <tbody class="text-center">
+            {{#each user}}
+              <tr>
+                <td></td>
+                <td>{{name}}</td>
+                <td>{{email}}</td>
+                <td data-label="Result">
+                  <button class="btn btn-danger fail-btn" type="button" user-id="{{_id}}" onclick="removeUser(this)">
+                    Remove
+                  </button>
+                 
+                </td>
+                <td>
+                     <a class="btn btn-info" href="/admin/action/userinfo/{{_id}}" >
+                  User Info
+                  </a>
+                </td>
+              </tr>        
+              {{/each}}     
+            </tbody>
+          </form>
+        </table>
+      </div>
+    </div>
+
+   
+
+
+    <!-- bootstrap js script below  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/static/Admin/js/admin.js"></script>
+  </body>
+</html>

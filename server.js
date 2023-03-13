@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 
 const port = process.env.PORT  || 8000;
 const path = require("path")
+const adminroutes = require('./routes/admin')
 const loginroutes = require('./routes/login')
 const mainroutes = require('./routes/home')
 const userroutes = require('./routes/userroutes')
@@ -32,6 +33,7 @@ app.set("views",static_path)
 app.use('/',loginroutes)
 app.use('/home',mainroutes)
 app.use('/user',userroutes)
+app.use('/admin',adminroutes)
 
 app.listen(port,()=>{
     console.log(`Server is running at port no ${port}`);

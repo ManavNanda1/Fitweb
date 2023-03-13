@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/static/User/css/Style.css" />
+    <title>FitWeb</title>
+  </head>
+  <body>
+    <!-- navbar section starts below  -->
+    <header class="container-fluid">
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/home"
+            ><img src="/static/User/images/logo.png" alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link "
+                  aria-current="page"
+                  href="/user/exercise"
+                  >Workout</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="/user/bmi"
+                  >BMI Calculator</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link "
+                  aria-current="page"
+                  href="/user/diet"
+                  >Diet Plans</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  More Exercises
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/user/biceps">Biceps</a></li>
+                  <li><a class="dropdown-item" href="/user/chest">Chest</a></li>
+                  <li>
+                    <a class="dropdown-item" href="/user/shoulder">Shoulder</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/user/core">Core(Abs)</a>
+                  </li>
+                  <li><a class="dropdown-item" href="/user/leg">Legs</a></li>
+                  <li><a class="dropdown-item" href="/user/back">Back</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link "
+                  aria-current="page"
+                  href="/user/profile"
+                  >User-Profile</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- navbar section ends below  -->
+
+    <!-- Carousel section Starts here  -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="/static/User/images/popeye.jpg"
+            class="d-block w-100 img-fluid"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-weight: bolder; font-size: 35px">
+              Exercise Now !!!
+            </h5>
+            <p style="font-size: 30px">
+              “If you don’t make time for exercise, you’ll probably have to make
+              time for illness.”
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/static/User/images/new1.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-weight: bolder; font-size: 35px">
+              No Pain No Gain
+            </h5>
+            <p style="font-size: 30px">
+              “The last three or four reps is what makes the muscle grow. This
+              area of pain divides a champion from someone who is not a
+              champion.”
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/static/User/images/new2.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="font-weight: bolder; font-size: 35px">
+              Dont Be The Same Be Better
+            </h5>
+            <p style="font-size: 30px">
+              ¨Most people fail, not because of lack of desire, but, because of
+              lack of commitment.¨
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Carousel section ends here  -->
+
+  
+    <div class="services-head text-center mt-4 mb-3 service-head" style="font-size: 40px;color: red;background-color: black; border-radius: 20px;">Services</div>
+      <div class="row mt-4 Service-cards" style=" background-color: black; color: white;">
+        <div class="col-sm-5 text-center"><img src="/static/User/images/services/service-pic.jpg" class="img-fluid" alt="">
+      </div>
+        <div class="col-sm-7 p-5">
+             <div class="row mb-4">
+              <div class="col-sm-6">
+                <div class="imgserv1"><img src="/static/User/images/services/service-icon-1.png" class="img-fluid" alt="">
+                  <h4>Strategies</h4>
+                  <p>Apply some of the strategies in your daily life. for better life in your career.</p>
+                </div>
+              </div>
+              <div class="col-sm-6"><div class="imgserv1"><img src="/static/User/images/services/service-icon-2.png" class="img-fluid" alt="">
+              </div>
+              <h4>Yoga</h4>
+              <p>Do Yoga atleast 15 minutes a day which helps you to make your life more stress free..</p>
+            </div>
+             </div>
+             <div class="row mt-5">
+              <div class="col-sm-6"><div class="imgserv1"><img src="/static/User/images/services/service-icon-3.png" class="img-fluid" alt=""></div> <h4>Workout</h4>
+              <p>As doctor suggests an apple a day keeps doctor away. but we suggest an workout a day keeps doctor away</p></div>
+              <div class="col-sm-6"><div class="imgserv1"><img src="/static/User/images/services/service-icon-4.png" class="img-fluid" alt=""></div> <h4>Weight-loss</h4>
+              <p>Our fitweb suggest you some of the best diet tips which helps you to make your life even healthier</p></div>
+             </div>
+        </div>
+        </div>
+        <section class="register-section spad mt-5 mb-4" style="color: #cf5555;">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-lg-8">
+                      <div class="register-text">
+                          <div class="section-title">
+                              <h2 class="text-center">Contact Us Now</h2>
+                              <p class="text-center">FitWeb Is the Place For Your Healthy Benefits</p>
+                          </div>
+                          <form action= "https://formsubmit.co/fa534c15b7368a4f15b4fefd8f2c993a" method="POST" class="register-form">
+                              <div class="row">
+                                  <div class="col-lg-6">
+                                      <label name="name">First Name</label>
+                                      <input name="name" type="text">
+                                  </div>
+                                  <div class="col-lg-6">
+                                      <label name="email">Your email address</label>
+                                      <input name="email" type="text">
+                                  </div>
+                                  <div class="col-lg-6">
+                                      <label name="last-name">Last Name</label>
+                                      <input name="last-name" type="text">
+                                  </div>
+                                  <div class="col-lg-6">
+                                      <label name="mobile">Mobile No*</label>
+                                      <input name="number" type="text">
+                                  </div>
+                              </div>
+                              <button type="submit" class="register-btn">Get Started</button>
+                          </form>
+                      </div>
+                  </div>
+                  <div class="col-lg-4">
+                      <div class="register-pic">
+                          <img src="/static/User/images/new2.jpg" width="100%" class="img=-fluid" alt="">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+    <!-- Footer Section Starts Below  -->
+    <div class="container-fluid mt-5">
+      <footer class="text-white text-center text-lg-start bg-dark">
+        <!-- Grid container -->
+        <div class="container-fluid p-4">
+          <!--Grid row-->
+          <div class="row mt-4">
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-4">About This Web</h5>
+
+              <p>
+                In Our Website <b>FitWeb</b> You can get Everthing At One Place
+                For Your Daily Routine Life.
+              </p>
+
+              <p>
+                Here In <b>FitWeb</b> You Can See Your BMI Index. Then See Some
+                Of the Diet Plans.And SOme Of the Best Exercises You Can DO For
+                Better And Healthy Routine
+              </p>
+
+              <div class="mt-4">
+                <!-- Facebook -->
+                <a
+                  type="button"
+                  href="https://www.facebook.com/manavmanav.nanda"
+                  target="_blank"
+                  class="btn btn-floating btn-light btn-lg"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <!-- Instagram -->
+                <a
+                  type="button"
+                  href="https://www.instagram.com/manav_nanda1/"
+                  target="_blank"
+                  class="btn btn-floating btn-light btn-lg"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <!-- Gmail -->
+                <a
+                  type="button"
+                  href="https://mail.google.com/mail/u/0/#inbox"
+                  target="_blank"
+                  class="btn btn-floating btn-light btn-lg"
+                  ><i class="fab fa-discord"></i
+                ></a>
+                <!-- Github -->
+                <a
+                  type="button"
+                  href="https://github.com/ManavNanda1"
+                  target="_blank"
+                  class="btn btn-floating btn-light btn-lg"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <!-- Linkedin -->
+                <a
+                  type="button"
+                  href="https://www.linkedin.com/in/manav-nanda-645a4b204/"
+                  target="_blank"
+                  class="btn btn-floating btn-light btn-lg"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-4 pb-1">Search something</h5>
+
+              <div class="form-outline form-white mb-4">
+                <input
+                  placeholder="Search Here"
+                  type="text"
+                  id="formControlLg"
+                  class="form-control form-control-lg text-center"
+                />
+              </div>
+
+              <ul class="fa-ul mt-2" style="margin-left: 1.65em">
+                <li class="mb-3">
+                  <span class="fa-li"><i class="fas fa-home"></i></span
+                  ><span class="ms-2">Jamnagar , Gujarat</span>
+                </li>
+                <li class="mb-3">
+                  <span class="fa-li"><i class="fas fa-envelope"></i></span
+                  ><span class="ms-2">nandamanav7@gmail.com</span>
+                </li>
+                <li class="mb-3">
+                  <span class="fa-li"><i class="fas fa-phone"></i></span
+                  ><span class="ms-2">+91 8780160945</span>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase mb-4">Features Of FitWeb</h5>
+
+              <table class="table text-center text-white">
+                <tbody class="fw-normal">
+                  <tr>
+                    <td>Exercises -</td>
+                    <td>Per Category</td>
+                  </tr>
+                  <tr>
+                    <td>BMI Index -</td>
+                    <td>Per Fat Level</td>
+                  </tr>
+                  <tr>
+                    <td>Diet Plans -</td>
+                    <td>Good For Health</td>
+                  </tr>
+                  <tr>
+                    <td>More Exercises-</td>
+                    <td>60+ Per Muscle</td>
+                  </tr>
+                  <tr>
+                    <td>Exercise Table</td>
+                    <td>Exercise As Day</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          © 2023 Copyright:
+          <a class="text-white" href="https://nandamanav.cf" target="_blank"
+            >Manav_Nanda_Major_Project-2</a
+          >
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </div>
+    <!-- Footer Section Ends Here  -->
+
+    <!-- bootstrap and js links below  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/static/User/js/Script.js"></script>
+  </body>
+</html>

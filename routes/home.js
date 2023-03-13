@@ -10,6 +10,6 @@ const isAuth = (req, res, next) => {
   }
 };
 router.get("/", isAuth, (req, res) => {
-  res.render("index");
+  res.render("User/index");
 });
 module.exports = router;

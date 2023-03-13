@@ -7,7 +7,7 @@ const User = require("../model/User");
 
 router.get('/', (req, res) => {
     if(!req.session.user){
-        res.render('login')
+        res.render('User/login')
     }
     else{
         res.redirect('/home');
@@ -32,8 +32,15 @@ router.post("/register", async (req, res) => {
             name:name,
             image:img_src
         })
-        newuser.save()
-        res.status(200).json({ message: "User saved sucessfully" });
+       const newnewuser = await newuser.save()
+        req.session.user = {
+          id: newnewuser._id,
+          email: newnewuser.email,
+          name: newnewuser.name
+        };
+        req.session.save()
+        res.redirect('/')
+        // res.status(200).json({ message: "User saved sucessfully" });
       }
     } catch (error) {
       res.status(500).json({ message: error.message });
@@ -56,6 +63,7 @@ router.post("/login", async (req, res) => {
         email: user.email,
         name: user.name
       };
+      req.session.save()
       res.redirect("/user/index");
     }
   } catch (error) {
