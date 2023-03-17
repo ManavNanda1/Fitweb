@@ -39,21 +39,42 @@ router.get("/exercise", isAuth, async (req, res) => {
 router.get("/profile", isAuth, async (req, res) => {
   const data = await ExercisesOfUser.find({ userid: req.session.user.id });
   const user = await User.findById(req.session.user.id);
-  let exercisedata = [];
-  for (let i = 0; i < data.length; i++) {
-    const itemdata= await Exercise.findById(data[i].eid)
-    exercisedata.push({
-      ename:itemdata.name,
-      updatedAt:data[i].updatedAt,
-      count:data[i].count,
-      eid:data[i].eid
-    })
+  if (data.length>0) {
+    let exercisedata = [];
+    for (let i = 0; i < data.length; i++) {
+      const itemdata= await Exercise.findById(data[i].eid)
+      exercisedata.push({
+        ename:itemdata.name,
+        updatedAt:data[i].updatedAt,
+        count:data[i].count,
+        eid:data[i].eid
+      })
+    }
+    res.render("User/userprofile", {
+      user: user,
+      udata: exercisedata,
+    });
+  }else{
+    res.render("User/userprofile",{user: user});
   }
-  res.render("User/userprofile", {
-    user: user,
-    udata: exercisedata,
-  });
+ 
 });
+
+router.post("/profile/action/removeexercise/:exid", isAuth, async (req, res) => {
+      const exid=req.params.exid
+      try {
+        const remvableid = await ExercisesOfUser.findOne({userid:req.session.user.id},{eid:exid})
+      
+          await ExercisesOfUser.findByIdAndDelete(remvableid._id)
+          res.json({message:'successfully deleted',ok:true})
+       
+        
+      } catch (error) {
+        res.json({message:'successfully deleted',ok:false})
+      }
+
+
+})
 router.post("/exercise/save", isAuth, async (req, res) => {
   const { id } = req.body;
   try {
